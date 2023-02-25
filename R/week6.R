@@ -23,5 +23,5 @@ citations_tbl <- tibble(line = as.integer(1:length(citations_txt)), cite = citat
   mutate(first_author = str_extract(cite, "(?<=^|, )\\p{Lu}\\p{Ll}+, \\p{Lu}(?=\\.)"))
 #need further edit
 #mutate(first_author = str_extract(cite, "^[A-Za-z].*?, "))
-
+sum(!is.na(citations_tbl$first_author))
 
